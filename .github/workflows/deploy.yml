@@ -30,7 +30,7 @@ jobs:
       env:
         SSH_PRIVATE: ${{ secrets.SSH_PRIVATE }}
         GIT_NAME: matchy233
-        GIT_EMAIL: matchy233@email.com
+        GIT_EMAIL: matchy233@gmail.com
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_PRIVATE" | tr -d '\r' > ~/.ssh/id_rsa
