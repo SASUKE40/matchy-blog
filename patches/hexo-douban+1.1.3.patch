@@ -1,28 +1,85 @@
+diff --git a/node_modules/hexo-douban/.eslintrc b/node_modules/hexo-douban/.eslintrc
+index 73019a1..4537cda 100644
+--- a/node_modules/hexo-douban/.eslintrc
++++ b/node_modules/hexo-douban/.eslintrc
+@@ -1,6 +1,9 @@
+ {
+   "extends": "hexo",
+   "root": true,
++  "rules": {
++    "no-console": 1
++  },
+   "env": {
+     "browser": true
+   }
+diff --git a/node_modules/hexo-douban/index.js b/node_modules/hexo-douban/index.js
+index 7ff7966..73df50b 100644
+--- a/node_modules/hexo-douban/index.js
++++ b/node_modules/hexo-douban/index.js
+@@ -55,7 +55,7 @@ hexo.extend.console.register('douban', 'Generate pages from douban', options, fu
+   }
+ 
+   var doubanLoadingPath = '/assets/douban-loading.gif';
+-  //Load static files
++  // Load static files
+   hexo.extend.generator.register('douban-gif', function (locals) {
+     return {
+       path: doubanLoadingPath,
+@@ -65,15 +65,15 @@ hexo.extend.console.register('douban', 'Generate pages from douban', options, fu
+     };
+   });
+ 
+-  //Register route
++  // Register route
+   names.forEach(name => {
+     hexo.extend.generator.register(name, require('./lib/' + name + '-generator'));
+   })
+ 
+   var self = this;
+-  var publicDir = self.public_dir;
++  var publicDir = this.public_dir;
+ 
+-  //Generate files
++  // Generate files
+   self.load().then(function () {
+     if(!fs.existsSync(publicDir)){
+       fs.mkdirSync(publicDir);
+@@ -81,9 +81,12 @@ hexo.extend.console.register('douban', 'Generate pages from douban', options, fu
+     if(!fs.existsSync(path.join(publicDir,'assets'))){
+       fs.mkdirSync(path.join(publicDir,'assets'));
+     }
+-    self.route.get(doubanLoadingPath)._data().then(function (stream) {
+-      stream.pipe(fs.createWriteStream(path.join(publicDir, doubanLoadingPath)));
+-    });
++    self.route.get(doubanLoadingPath);
++    // .data().then(function (stream) {
++    //   stream.pipe(
++    //     fs.createWriteStream(path.join(publicDir, doubanLoadingPath))
++    //     );
++    // });
+     names.forEach(name => {
+       var id = name + "/index.html";
+       self.route.get(id) && self.route.get(id)._data().then(function (contents) {
 diff --git a/node_modules/hexo-douban/lib/templates/index.css b/node_modules/hexo-douban/lib/templates/index.css
-index 7ea3a5a..3dafe13 100644
+index 7ea3a5a..6f157aa 100644
 --- a/node_modules/hexo-douban/lib/templates/index.css
 +++ b/node_modules/hexo-douban/lib/templates/index.css
-@@ -30,9 +30,19 @@
- 
- .hexo-douban-picture {
-     position: absolute;
-+    display: block;
-     left: 0;
-     top: 10px;
+@@ -35,6 +35,14 @@
      width: 100px;
-+    height: auto;
-+}
-+
+ }
+ 
 +img {
 +    vertical-align: middle;
 +    left: 0;
 +    width: 100px;
 +    max-height: 150px;
 +    height: auto;
- }
- 
++}
++
  .hexo-douban-info {
-@@ -70,4 +80,3 @@
+     padding-left: 120px;
+ }
+@@ -70,4 +78,3 @@
  .hexo-douban-show {
      display: block;
  }

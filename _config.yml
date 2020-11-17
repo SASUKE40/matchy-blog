@@ -112,7 +112,7 @@ douban:
   game:
     title: 'Video Games'
     quote: "Video games are the Ninth Art."
-  timeout: 50000
+  timeout: 100000
 
 all_minifier: true
 
