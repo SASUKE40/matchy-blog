@@ -104,15 +104,15 @@ douban:
   user: 121674894
   builtin: false
   book:
-    title: 'This is my book title'
-    quote: 'This is my book quote'
+    title: 'Books'
+    quote: '“So many books, so little time.”  ― Frank Zappa'
   movie:
-    title: 'This is my movie title'
-    quote: 'This is my movie quote'
+    title: 'Movies'
+    quote: '“Academia is the death of cinema. It is the very opposite of passion. Film is not the art of scholars, but of illiterates.” ― Werner Herzog'
   game:
-    title: 'This is my game titlehexo'
-    quote: 'This is my game quote'
-  timeout: 10000
+    title: 'Video Games'
+    quote: "Video games are the Ninth Art."
+  timeout: 50000
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
