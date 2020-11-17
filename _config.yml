@@ -100,6 +100,20 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: fluid
 
+douban:
+  user: 121674894
+  builtin: false
+  book:
+    title: 'This is my book title'
+    quote: 'This is my book quote'
+  movie:
+    title: 'This is my movie title'
+    quote: 'This is my movie quote'
+  game:
+    title: 'This is my game titlehexo'
+    quote: 'This is my game quote'
+  timeout: 10000
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
