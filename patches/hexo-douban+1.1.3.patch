@@ -1,0 +1,29 @@
+diff --git a/node_modules/hexo-douban/lib/templates/index.css b/node_modules/hexo-douban/lib/templates/index.css
+index 7ea3a5a..3dafe13 100644
+--- a/node_modules/hexo-douban/lib/templates/index.css
++++ b/node_modules/hexo-douban/lib/templates/index.css
+@@ -30,9 +30,19 @@
+ 
+ .hexo-douban-picture {
+     position: absolute;
++    display: block;
+     left: 0;
+     top: 10px;
+     width: 100px;
++    height: auto;
++}
++
++img {
++    vertical-align: middle;
++    left: 0;
++    width: 100px;
++    max-height: 150px;
++    height: auto;
+ }
+ 
+ .hexo-douban-info {
+@@ -70,4 +80,3 @@
+ .hexo-douban-show {
+     display: block;
+ }
+-
