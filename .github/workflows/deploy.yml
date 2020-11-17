@@ -25,7 +25,7 @@ jobs:
         rm -rf ./public
         yarn run hexo clean
         yarn run hexo generate
-        yarn run hexo douban -b
+        yarn run hexo douban -bgm
 
     - name: Hexo Deploy           # 部署步骤，这里以 hexo deploy 为例
       env:
