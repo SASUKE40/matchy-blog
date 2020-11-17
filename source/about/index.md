@@ -12,6 +12,6 @@ I'm known as Mischa "Matchy" Volynskaya on most social media sites. You can call
 
 在大多数社交媒体网站上我都叫 Mischa "Matchy" Volynskaya，可以叫我 Matchy。本科生命科学和计算机科学双学位在读。研究上的兴趣是计算生物学，以后也想在这个领域深造。除此之外也想多学点系统编程和分布式计算的知识。
 
-In my spare time I unwind to reading, drawing, movies and video games.
+In my spare time I unwind to [reading](/books), drawing, [movies](/movies) and [video games](/games).
 
 空闲时间喜欢读书、画画、看电影、玩游戏聊做消遣。
