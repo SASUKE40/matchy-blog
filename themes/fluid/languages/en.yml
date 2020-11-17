@@ -42,3 +42,19 @@ page404:
 links:
   title: Links
   subtitle: Links
+
+douban:
+  title: Douban
+  subtitle: Douban
+
+books:
+  title: Books
+  subtitle: The books I read
+
+movies:
+  title: Movies
+  subtitle: The movies I watched
+
+games:
+  title: Games
+  subtitle: The video games I played
