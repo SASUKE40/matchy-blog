@@ -14,4 +14,4 @@ I'm known as Mischa "Matchy" Volynskaya on most social media sites. You can call
 
 In my spare time I unwind to [reading](/books), drawing, [movies](/movies) and [video games](/games).
 
-空闲时间喜欢读书、画画、看电影、玩游戏聊做消遣。
+空闲时间喜欢[读书](/books)、画画、看[电影](/movies)、玩[游戏](/games)聊做消遣。
