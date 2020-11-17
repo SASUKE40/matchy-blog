@@ -61,25 +61,50 @@ index 7ff7966..73df50b 100644
        var id = name + "/index.html";
        self.route.get(id) && self.route.get(id)._data().then(function (contents) {
 diff --git a/node_modules/hexo-douban/lib/templates/index.css b/node_modules/hexo-douban/lib/templates/index.css
-index 7ea3a5a..6f157aa 100644
+index 7ea3a5a..a3bdc47 100644
 --- a/node_modules/hexo-douban/lib/templates/index.css
 +++ b/node_modules/hexo-douban/lib/templates/index.css
-@@ -35,6 +35,14 @@
-     width: 100px;
+@@ -14,6 +14,8 @@
  }
  
-+img {
-+    vertical-align: middle;
-+    left: 0;
-+    width: 100px;
-+    max-height: 150px;
-+    height: auto;
+ .hexo-douban-item {
++    display: flex;
++    align-items: center;
+     padding-bottom: 10px;
+     position: relative;
+     clear: both;
+@@ -29,10 +31,19 @@
+ }
+ 
+ .hexo-douban-picture {
++    display: flex;
++    align-items: center;
+     position: absolute;
+     left: 0;
+-    top: 10px;
+-    width: 100px;
++    max-width: 100px;
++    height: 150px;
 +}
 +
- .hexo-douban-info {
-     padding-left: 120px;
++img {
++    display: block;
++    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
++    max-width: 100%;
++    max-height: 100%;
  }
-@@ -70,4 +78,3 @@
+ 
+ .hexo-douban-info {
+@@ -40,7 +51,7 @@
+ }
+ 
+ .hexo-douban-meta {
+-    font-size: 12px;
++    font-size: 16px;
+     padding-right: 10px;
+ }
+ 
+@@ -70,4 +81,3 @@
  .hexo-douban-show {
      display: block;
  }

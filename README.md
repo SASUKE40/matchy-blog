@@ -14,3 +14,5 @@ Based on [Hexo](https://hexo.io/). Used [Fluid](https://github.com/fluid-dev/hex
 - [x] Fix `hexo-douban` (use `package-patch`)
 - [x] Fix patched `hexo-douban` deployment bug
 - [x] Fix `hexo-douban` and `hexo-all-minifier` conflicts
+- [x] Align `hexo-douban` entry to center
+- [x] Make pictures in Douban page more blended in
