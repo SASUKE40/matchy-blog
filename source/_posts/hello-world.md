@@ -2,4 +2,4 @@
 title: Hello World
 ---
 
-Matchy's first blog, a placeholder. What to write next?
+Matchy's first blog post, a placeholder. What to write next?
