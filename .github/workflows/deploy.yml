@@ -1,6 +1,11 @@
-name: Deploy                      # Actions 显示的名字，随意设置
+name: Deploy
 
-on: [push]                        # 监听到 push 事件后触发
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+      - 'source/_drafts/**'
+      - '.github/**'
 
 jobs:
   build:
