@@ -60,12 +60,25 @@ index 7ff7966..73df50b 100644
      names.forEach(name => {
        var id = name + "/index.html";
        self.route.get(id) && self.route.get(id)._data().then(function (contents) {
+diff --git a/node_modules/hexo-douban/lib/templates/bookRead.ejs b/node_modules/hexo-douban/lib/templates/bookRead.ejs
+index 88ce77d..bb54921 100644
+--- a/node_modules/hexo-douban/lib/templates/bookRead.ejs
++++ b/node_modules/hexo-douban/lib/templates/bookRead.ejs
+@@ -1,5 +1,5 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+     <div class="hexo-douban-info">
+         <div class="hexo-douban-title"><a target="_blank" href="<%= item.alt %>"> <%= item.title %></a></div>
+         <div class="hexo-douban-meta"><%= item.pub %></div>
 diff --git a/node_modules/hexo-douban/lib/templates/bookReading.ejs b/node_modules/hexo-douban/lib/templates/bookReading.ejs
-index 4ba3e14..c85e4a7 100644
+index 4ba3e14..f188567 100644
 --- a/node_modules/hexo-douban/lib/templates/bookReading.ejs
 +++ b/node_modules/hexo-douban/lib/templates/bookReading.ejs
-@@ -2,7 +2,7 @@
-     <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+@@ -1,8 +1,8 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
      <div class="hexo-douban-info">
          <div class="hexo-douban-title"><a target="_blank" href="<%= item.alt %>"> <%= item.title %></a></div>
 -        <div class="hexo-douban-meta"><%= item.pub %>  </div>
@@ -74,11 +87,13 @@ index 4ba3e14..c85e4a7 100644
          <div class="hexo-douban-comments"><%= item.comment %></div>
      </div>
 diff --git a/node_modules/hexo-douban/lib/templates/bookWish.ejs b/node_modules/hexo-douban/lib/templates/bookWish.ejs
-index 631e759..c85e4a7 100644
+index 631e759..f188567 100644
 --- a/node_modules/hexo-douban/lib/templates/bookWish.ejs
 +++ b/node_modules/hexo-douban/lib/templates/bookWish.ejs
-@@ -2,8 +2,7 @@
-     <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+@@ -1,9 +1,8 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
      <div class="hexo-douban-info">
          <div class="hexo-douban-title"><a target="_blank" href="<%= item.alt %>"> <%= item.title %></a></div>
 -        <div class="hexo-douban-meta"><%= item.pub %>
@@ -88,10 +103,14 @@ index 631e759..c85e4a7 100644
          <div class="hexo-douban-comments"><%= item.comment %></div>
      </div>
 diff --git a/node_modules/hexo-douban/lib/templates/gamePlayed.ejs b/node_modules/hexo-douban/lib/templates/gamePlayed.ejs
-index feba4f2..31549c3 100644
+index feba4f2..7562333 100644
 --- a/node_modules/hexo-douban/lib/templates/gamePlayed.ejs
 +++ b/node_modules/hexo-douban/lib/templates/gamePlayed.ejs
-@@ -4,8 +4,8 @@
+@@ -1,11 +1,11 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+     <div class="hexo-douban-info">
          <div class="hexo-douban-title">
              <a target="_blank" href="<%= item.alt %>"><%= item.title %></a>
          </div>
@@ -103,10 +122,15 @@ index feba4f2..31549c3 100644
  </div>
 -
 diff --git a/node_modules/hexo-douban/lib/templates/gamePlaying.ejs b/node_modules/hexo-douban/lib/templates/gamePlaying.ejs
-index 05a525f..31549c3 100644
+index 05a525f..7562333 100644
 --- a/node_modules/hexo-douban/lib/templates/gamePlaying.ejs
 +++ b/node_modules/hexo-douban/lib/templates/gamePlaying.ejs
-@@ -5,8 +5,7 @@
+@@ -1,12 +1,11 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+     <div class="hexo-douban-info">
+         <div class="hexo-douban-title">
              <a target="_blank" href="<%= item.alt %>"><%= item.title %></a>
          </div>
          <div class="hexo-douban-meta"><%= item.info %> </div>
@@ -117,10 +141,15 @@ index 05a525f..31549c3 100644
  </div>
 -
 diff --git a/node_modules/hexo-douban/lib/templates/gameWish.ejs b/node_modules/hexo-douban/lib/templates/gameWish.ejs
-index ce61c0a..26c4df1 100644
+index ce61c0a..0a5309d 100644
 --- a/node_modules/hexo-douban/lib/templates/gameWish.ejs
 +++ b/node_modules/hexo-douban/lib/templates/gameWish.ejs
-@@ -5,6 +5,7 @@
+@@ -1,10 +1,11 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+     <div class="hexo-douban-info">
+         <div class="hexo-douban-title">
              <a target="_blank" href="<%= item.alt %>"><%= item.title %></a>
          </div>
          <div class="hexo-douban-meta"><%= item.info %></div>
@@ -130,7 +159,7 @@ index ce61c0a..26c4df1 100644
  </div>
 -
 diff --git a/node_modules/hexo-douban/lib/templates/index.css b/node_modules/hexo-douban/lib/templates/index.css
-index 7ea3a5a..26d138b 100644
+index 7ea3a5a..b144de7 100644
 --- a/node_modules/hexo-douban/lib/templates/index.css
 +++ b/node_modules/hexo-douban/lib/templates/index.css
 @@ -14,6 +14,8 @@
@@ -156,7 +185,7 @@ index 7ea3a5a..26d138b 100644
 +    height: 150px;
 +}
 +
-+img {
++img.shadowed {
 +    display: block;
 +    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 +    max-width: 100%;
@@ -190,10 +219,14 @@ index 7ea3a5a..26d138b 100644
  }
 -
 diff --git a/node_modules/hexo-douban/lib/templates/movieWatched.ejs b/node_modules/hexo-douban/lib/templates/movieWatched.ejs
-index feba4f2..995a69e 100644
+index feba4f2..34ca50d 100644
 --- a/node_modules/hexo-douban/lib/templates/movieWatched.ejs
 +++ b/node_modules/hexo-douban/lib/templates/movieWatched.ejs
-@@ -4,8 +4,7 @@
+@@ -1,11 +1,10 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+     <div class="hexo-douban-info">
          <div class="hexo-douban-title">
              <a target="_blank" href="<%= item.alt %>"><%= item.title %></a>
          </div>
@@ -204,10 +237,14 @@ index feba4f2..995a69e 100644
  </div>
 -
 diff --git a/node_modules/hexo-douban/lib/templates/movieWatching.ejs b/node_modules/hexo-douban/lib/templates/movieWatching.ejs
-index ce61c0a..f86e126 100644
+index ce61c0a..2526e6d 100644
 --- a/node_modules/hexo-douban/lib/templates/movieWatching.ejs
 +++ b/node_modules/hexo-douban/lib/templates/movieWatching.ejs
-@@ -4,7 +4,8 @@
+@@ -1,10 +1,11 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+     <div class="hexo-douban-info">
          <div class="hexo-douban-title">
              <a target="_blank" href="<%= item.alt %>"><%= item.title %></a>
          </div>
@@ -219,10 +256,14 @@ index ce61c0a..f86e126 100644
  </div>
 -
 diff --git a/node_modules/hexo-douban/lib/templates/movieWish.ejs b/node_modules/hexo-douban/lib/templates/movieWish.ejs
-index ce61c0a..f86e126 100644
+index ce61c0a..2526e6d 100644
 --- a/node_modules/hexo-douban/lib/templates/movieWish.ejs
 +++ b/node_modules/hexo-douban/lib/templates/movieWish.ejs
-@@ -4,7 +4,8 @@
+@@ -1,10 +1,11 @@
+ <div class="hexo-douban-item">
+-    <div class="hexo-douban-picture"><img src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
++    <div class="hexo-douban-picture"><img class="shadowed" src="<%= root %>/assets/douban-loading.gif" data-src="<%= item.image %>" referrerPolicy="no-referrer" /></div>
+     <div class="hexo-douban-info">
          <div class="hexo-douban-title">
              <a target="_blank" href="<%= item.alt %>"><%= item.title %></a>
          </div>

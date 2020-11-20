@@ -17,4 +17,4 @@ Based on [Hexo](https://hexo.io/). Used [Fluid](https://github.com/fluid-dev/hex
 - [x] Align `hexo-douban` entry to center
 - [x] Make pictures in Douban page more blended in
 - [x] Beautify `hexo-douban` entry
-- [ ] Add favicon before Blog name
+- [x] Add favicon before Blog name (also fix wrongly added shadow to favicon)
