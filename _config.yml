@@ -114,6 +114,9 @@ douban:
     quote: "Video games are the Ninth Art."
   timeout: 100000
 
+sitemap:
+  path: sitemap.xml
+
 all_minifier: true
 
 # Deployment
