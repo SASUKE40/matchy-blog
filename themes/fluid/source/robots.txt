@@ -1,0 +1,9 @@
+Sitemap: https://matchy233.github.io/sitemap.xml
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: *
+Disallow: /categories/
+Disallow: /tags/
+Allow: /
