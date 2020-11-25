@@ -102,6 +102,15 @@ index 631e759..f188567 100644
          <div class="hexo-douban-meta"><%= item.updated %> / <%= item.tags %></div>
          <div class="hexo-douban-comments"><%= item.comment %></div>
      </div>
+diff --git a/node_modules/hexo-douban/lib/templates/game.ejs b/node_modules/hexo-douban/lib/templates/game.ejs
+index e927f3a..6dd3102 100644
+--- a/node_modules/hexo-douban/lib/templates/game.ejs
++++ b/node_modules/hexo-douban/lib/templates/game.ejs
+@@ -47,4 +47,3 @@
+     <% include index.js %>
+     <% include pagination.js %>
+ </script>
+-
 diff --git a/node_modules/hexo-douban/lib/templates/gamePlayed.ejs b/node_modules/hexo-douban/lib/templates/gamePlayed.ejs
 index feba4f2..7562333 100644
 --- a/node_modules/hexo-douban/lib/templates/gamePlayed.ejs
@@ -159,10 +168,16 @@ index ce61c0a..0a5309d 100644
  </div>
 -
 diff --git a/node_modules/hexo-douban/lib/templates/index.css b/node_modules/hexo-douban/lib/templates/index.css
-index 7ea3a5a..b144de7 100644
+index 7ea3a5a..998d440 100644
 --- a/node_modules/hexo-douban/lib/templates/index.css
 +++ b/node_modules/hexo-douban/lib/templates/index.css
-@@ -14,6 +14,8 @@
+@@ -9,11 +9,13 @@
+ }
+ 
+ .hexo-douban-active {
+-    background: #657b83;
++    background: #6d6985;
+     color: #fff;
  }
  
  .hexo-douban-item {
@@ -213,6 +228,15 @@ index 7ea3a5a..b144de7 100644
  .hexo-douban-comments {
      font-size: 12px;
  }
+@@ -59,7 +78,7 @@
+ }
+ 
+ .hexo-douban-button:hover {
+-    background: #657b83;
++    background: #6d6985;
+     color: #fff;
+ }
+ 
 @@ -70,4 +89,3 @@
  .hexo-douban-show {
      display: block;
