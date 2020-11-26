@@ -26,6 +26,7 @@ The command will create `example-draft.md` and place it in `/source/_drafts/` di
 
 - `title`
 - `tags`
+- `excerpt`: manually set excerpt
 - `index_img`: the thumbnail image shown to the right of title and except on Home page; can be images in `/img/` or external link
 - `banner_img`: the banner image shown at the top of the post page; can be images in `/img/` or external link
 
