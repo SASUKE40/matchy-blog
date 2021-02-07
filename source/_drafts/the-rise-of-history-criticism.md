@@ -4,6 +4,7 @@ categories: [misc]
 tags: [translate]
 ---
 
+> 原文链接： [Gutenberg Project: Essays and Lectures](http://www.gutenberg.org/files/774/774-h/774-h.htm)<br>
 > 本文系为参选 1879 年牛津校长英语美文赏（Chancellor's English Essay Prize）[^1] 所作之作品。主题为古希腊罗马人（Ancients）[^2] 的历史批判学（historical criticism）。此文没有获奖。感谢 J. W. Mackail 教授对本文的初稿（proofs）进行了校对。
 
 ## I
