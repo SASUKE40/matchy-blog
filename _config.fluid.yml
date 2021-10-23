@@ -651,7 +651,7 @@ disqus:
 gitalk:
   clientID: bf7b10dfd08a0165382f
   clientSecret: 45bdef0cb42cd2de2980d44c008862ef6120ffcd
-  repo: https://github.com/matchy233/matchy233.github.io
+  repo: matchy233.github.io
   owner: matchy233
   admin: ['matchy233']
   language: en-US
@@ -885,7 +885,7 @@ static_prefix:
 
   valine: https://cdn.staticfile.org/valine/1.4.14/
 
-  gitalk: https://cdn.staticfile.org/gitalk/1.7.0/
+  gitalk: https://cdn.staticfile.org/gitalk/1.7.2/
 
   disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/
 
