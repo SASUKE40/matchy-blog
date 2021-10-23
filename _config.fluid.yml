@@ -607,9 +607,9 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # Options: disqus | valine | gitalk | utterances | changyan | livere | remark42 | twikoo
-    type: disqus
+    type: gitalk
 
 
 #---------------------------
@@ -649,11 +649,11 @@ disqus:
 # Based on GitHub Issues
 # See: https://github.com/gitalk/gitalk#options
 gitalk:
-  clientID:
-  clientSecret:
-  repo:
-  owner:
-  admin: ['name']
+  clientID: bf7b10dfd08a0165382f
+  clientSecret: 45bdef0cb42cd2de2980d44c008862ef6120ffcd
+  repo: https://github.com/matchy233/matchy233.github.io
+  owner: matchy233
+  admin: ['matchy233']
   language: en-US
   labels: ['Gitalk']
   perPage: 10
