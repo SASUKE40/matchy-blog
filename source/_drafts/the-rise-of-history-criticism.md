@@ -37,13 +37,13 @@ tags: [translate]
 
 ### 注释
 
-[^1] [Chancellor's English Essay Prize](https://www.english.ox.ac.uk/prizes-and-studentships#collapse385941)
-[^2] 英语语境中 ancients 多指古希腊、罗马人
-[^3] 应该指的是[居鲁士圆柱](https://en.wikipedia.org/wiki/Cyrus_Cylinder)，该泥柱在美索不达米亚文明旧址被发掘。其上以居鲁士大帝的名义记述了居鲁士灭新巴比伦后准许被俘犹太人返回应许之地的政策。被视为世界上最早的人权宣言，也是促使犹太教发源的事件之一
-[^4] 该希腊转写与拉丁同源词见诸多部古希腊罗马史学著作，如[斯特拉波](https://en.wikipedia.org/wiki/Strabo)（[Strabo](https://en.wikipedia.org/wiki/Strabo)，古希腊著名地理学家）的《[地理学（*Geographica*）](https://en.wikipedia.org/wiki/Geographica)》卷 15，[查士丁](https://en.wikipedia.org/wiki/Justin_%28historian%29 )（[Justin](https://en.wikipedia.org/wiki/Justin_%28historian%29)，全名 [Marcus Junianus Justinus](https://en.wikipedia.org/wiki/Justin_(historian))，罗马帝国历史学家）的 《<腓力史> 概要（*Epitome of The Philippic History of Pompeius Trogus*）》卷 15 及大普林尼（Pliny the Elder）的《[博物志（Natural History）](https://en.wikipedia.org/wiki/Natural_History_%28Pliny%29)》 卷 13 等等。（Ref: McCrindle, J.W. (1877). *Ancient India as Describe by Megasthenes and Arrian*. London, UK:Trubner & Co. pp.10）
-[^5] 旃陀罗笈多，又称月护王，[孔雀王朝（Maurya Empire）](https://en.wikipedia.org/wiki/Maurya_Empire)开国之君，首次统一了印度河流域和恒河流域。孔雀王朝也是第一个（基本）统一了印度的政权——除了泰米尔三国（[哲罗/蕉赖王朝](https://en.wikipedia.org/wiki/Chera_dynasty)，[朱罗王朝](https://en.wikipedia.org/wiki/Chola_dynasty)，[潘地亚王朝](https://en.wikipedia.org/wiki/Pandya_dynasty)）；当然，统一印度的君主并不是月护王，而是他的孙子[阿育王（Ashoka）](https://en.wikipedia.org/wiki/Ashoka)
-[^6] 印度-日耳曼人种算上凯尔特人就是印欧人种，即所谓雅利安人（Aryan）
-[^7] 希腊语中的「希腊」就是 Hellas（Greek: Ελλάς），英语世界称希腊为 Greek 是因为罗马人叫希腊 Graecia（即 land of the Greeks），鬼知道为什么
-[^8] 原文为法文：L'esprit d'un siècle ne naît pas et ne meurt pas à jour fixe
-[^9] 赫拉克勒斯和涅索斯的故事：
-[^10]
+[^1]: [Chancellor's English Essay Prize](https://www.english.ox.ac.uk/prizes-and-studentships#collapse385941)
+[^2]: 英语语境中 ancients 多指古希腊、罗马人
+[^3]: 应该指的是 [居鲁士圆柱](https://en.wikipedia.org/wiki/Cyrus_Cylinder)，该泥柱在美索不达米亚文明旧址被发掘。其上以居鲁士大帝的名义记述了居鲁士灭新巴比伦后准许被俘犹太人返回应许之地的政策。被视为世界上最早的人权宣言，也是促使犹太教发源的事件之一。
+[^4]: 该希腊转写与拉丁同源词见诸多部古希腊罗马史学著作，如[斯特拉波](https://en.wikipedia.org/wiki/Strabo)（[Strabo](https://en.wikipedia.org/wiki/Strabo)，古希腊著名地理学家）的《[地理学（*Geographica*）](https://en.wikipedia.org/wiki/Geographica)》卷 15，[查士丁](https://en.wikipedia.org/wiki/Justin_%28historian%29)（[Justin](https://en.wikipedia.org/wiki/Justin_%28historian%29)，全名 [Marcus Junianus Justinus](https://en.wikipedia.org/wiki/Justin_(historian))，罗马帝国历史学家）的 《<腓力史> 概要（*Epitome of The Philippic History of Pompeius Trogus*）》卷 15 及大普林尼（Pliny the Elder）的《[博物志（Natural History）](https://en.wikipedia.org/wiki/Natural_History_%28Pliny%29)》 卷 13 等等。（Ref: McCrindle, J.W. (1877). *Ancient India as Describe by Megasthenes and Arrian*. London, UK:Trubner & Co. pp.10）
+[^5]: 旃陀罗笈多，又称月护王，[孔雀王朝（Maurya Empire）](https://en.wikipedia.org/wiki/Maurya_Empire)开国之君，首次统一了印度河流域和恒河流域。孔雀王朝也是第一个（基本）统一了印度的政权——除了泰米尔三国（[哲罗/蕉赖王朝](https://en.wikipedia.org/wiki/Chera_dynasty)，[朱罗王朝](https://en.wikipedia.org/wiki/Chola_dynasty)，[潘地亚王朝](https://en.wikipedia.org/wiki/Pandya_dynasty)）；当然，统一印度的君主并不是月护王，而是他的孙子[阿育王（Ashoka）](https://en.wikipedia.org/wiki/Ashoka)。
+[^6]: 印度-日耳曼人种算上凯尔特人就是印欧人种，即所谓雅利安人（Aryan）
+[^7]: 希腊语中的「希腊」就是 Hellas（Greek: Ελλάς），英语世界称希腊为 Greek 是因为罗马人叫希腊 Graecia（即 land of the Greeks），鬼知道为什么
+[^8]: 原文为法文：L'esprit d'un siècle ne naît pas et ne meurt pas à jour fixe
+[^9]: 赫拉克勒斯和涅索斯的故事：
+[^10]: 没写完
