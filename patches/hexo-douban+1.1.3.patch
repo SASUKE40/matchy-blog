@@ -60,6 +60,22 @@ index 7ff7966..73df50b 100644
      names.forEach(name => {
        var id = name + "/index.html";
        self.route.get(id) && self.route.get(id)._data().then(function (contents) {
+diff --git a/node_modules/hexo-douban/lib/templates/book.ejs b/node_modules/hexo-douban/lib/templates/book.ejs
+index 943070e..496b614 100644
+--- a/node_modules/hexo-douban/lib/templates/book.ejs
++++ b/node_modules/hexo-douban/lib/templates/book.ejs
+@@ -1,5 +1,5 @@
+ <blockquote>
+-    <p><%- quote; %></p>
++    <p class="note note-primary"><%- quote; %></p>
+ </blockquote>
+ 
+ <style>
+@@ -47,4 +47,3 @@
+     <% include index.js %>
+     <% include pagination.js %>
+ </script>
+-
 diff --git a/node_modules/hexo-douban/lib/templates/bookRead.ejs b/node_modules/hexo-douban/lib/templates/bookRead.ejs
 index 88ce77d..bb54921 100644
 --- a/node_modules/hexo-douban/lib/templates/bookRead.ejs
@@ -103,9 +119,16 @@ index 631e759..f188567 100644
          <div class="hexo-douban-comments"><%= item.comment %></div>
      </div>
 diff --git a/node_modules/hexo-douban/lib/templates/game.ejs b/node_modules/hexo-douban/lib/templates/game.ejs
-index e927f3a..6dd3102 100644
+index e927f3a..7600bf9 100644
 --- a/node_modules/hexo-douban/lib/templates/game.ejs
 +++ b/node_modules/hexo-douban/lib/templates/game.ejs
+@@ -1,5 +1,5 @@
+ <blockquote>
+-    <p><%- quote %></p>
++    <p class="note note-primary"><%- quote %></p>
+ </blockquote>
+ 
+ <style>
 @@ -47,4 +47,3 @@
      <% include index.js %>
      <% include pagination.js %>
@@ -241,6 +264,22 @@ index 7ea3a5a..998d440 100644
  .hexo-douban-show {
      display: block;
  }
+-
+diff --git a/node_modules/hexo-douban/lib/templates/movie.ejs b/node_modules/hexo-douban/lib/templates/movie.ejs
+index dec866a..b86387e 100644
+--- a/node_modules/hexo-douban/lib/templates/movie.ejs
++++ b/node_modules/hexo-douban/lib/templates/movie.ejs
+@@ -1,5 +1,5 @@
+ <blockquote>
+-    <p><%- quote; %></p>
++    <p class="note note-primary"><%- quote; %></p>
+ </blockquote>
+ 
+ <style>
+@@ -45,4 +45,3 @@
+     <% include index.js %>
+     <% include pagination.js %>
+ </script>
 -
 diff --git a/node_modules/hexo-douban/lib/templates/movieWatched.ejs b/node_modules/hexo-douban/lib/templates/movieWatched.ejs
 index feba4f2..34ca50d 100644
