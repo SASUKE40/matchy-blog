@@ -1,0 +1,12 @@
+.markdown-body code {
+  background-color: #f0e9fa;
+}
+
+[data-user-color-scheme=dark] .markdown-body :not(pre) > code {
+  background-color: #4f435f/* rgba(62,75,94,.35)*/;
+  color: #ffffff
+}
+
+code {
+  color: #000000
+}
