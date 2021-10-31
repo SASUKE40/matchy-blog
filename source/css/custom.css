@@ -1,9 +1,9 @@
 .markdown-body code {
-  background-color: #f0e9fa;
+  background-color: #eee7f9;
 }
 
 [data-user-color-scheme=dark] .markdown-body :not(pre) > code {
-  background-color: #4f435f/* rgba(62,75,94,.35)*/;
+  background-color:  #403e57;
   color: #ffffff
 }
 
