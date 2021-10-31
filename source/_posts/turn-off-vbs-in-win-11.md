@@ -2,8 +2,9 @@
 title: 如何保持 Hyper-V 开启，同时临时关闭 VBS
 author: CuriousLocky
 date: 2021-10-23 15:54:00
+excerpt: 教你如何在 Windows 11 关闭 VBS 的同时不影响 Hyper-V 服务，保持 WSL 和 WSA 正常工作 —— 没有 WSL 怎么种庄稼？
 categories: [misc]
-tags: [windows]
+tags: [windows11]
 ---
 
 此前IT之家的文章 [Win11 VBS 安全功能导致性能下降，教你如何检测并关闭](https://www.ithome.com/0/579/260.htm) 中介绍使用 `PowerShell` 命令
