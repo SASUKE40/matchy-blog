@@ -6,6 +6,7 @@ excerpt: 告别 CLion 的脑瘫 full remote 模式，体验像 VSCode remote 一
 categories:
   - misc
 date: 2021-10-31 22:48:00
+updated: 2021-11-08 01:01:00
 ---
 
 
@@ -69,43 +70,9 @@ $ projector --version
 projector, version 1.4.0
 ```
 
-执行 `projector install`，选择想要使用的 IDE 并按照提示安装。我当然是选择 CLion，且为了稳定选择了 Projector-tested IDE only。
+接下来只需执行 `projector install`，选择想要使用的 IDE 并按照提示安装。我当然是选择 CLion，且为了稳定选择了 Projector-tested IDE only。
 
-```shell
-$ projector install
-Checking for updates ... done.
-Installing IDE in quick mode; for full customization you can rerun this command
-with "--expert" argument or edit this config later via "projector config edit"
-command.
-           1. Idea_Community
-           2. Idea_Ultimate
-           3. PyCharm_Community
-           4. PyCharm_Professional
-           5. CLion
-           6. GoLand
-           7. DataGrip
-           8. PhpStorm
-           9. WebStorm
-          1.  RubyMine
-          2.  Rider
-          3.  DataSpell
-          4.  MPS
-Choose IDE type or 0 to exit: [0-13]:
-... # omitted lines
-Installing CLion 2020.3.4
-Configuration name: CLion
-To access IDE, open in browser
-        http://localhost:9999/
-        http://127.0.0.1:9999/
-        http://<your-lan-ip>:9999/
-
-To see Projector logs in realtime run
-        tail -f "/path/to/your/home/.projector/configs/CLion/projector.log"
-
-Exit IDE or press Ctrl+C to stop Projector.
-```
-
-可以看到每次安装完成后会生成一个 config 文件。可以使用 `projector config show <config-name>` 查看（如果只有一个 config file 不加 `<config-name>` 也能查看），默认是监听任何地址向 9999 端口的请求。想要修改可以 `projector config edit <config-name>`，我就不做修改了。
+安装完成后会生成一个 config 文件。可以使用 `projector config show <config-name>` 查看（如果只有一个 config file 不加 `<config-name>` 也能查看），默认是监听任何地址向 9999 端口的请求。如果安装多个 IDE，则会依次监听 `10000`、`10001`…等端口。想要修改可以 `projector config edit <config-name>`，我就不做修改了。
 
 ```shell
 $ projector config show CLion
@@ -122,7 +89,7 @@ Projector uses secure config (https/wss)= no
 此后便可使用 `projector run CLion` 运行所安装的 IDE，
 
 ```shell
-$ projector run
+$ projector run CLion
 To access IDE, open in browser
         http://localhost:9999/
         http://127.0.0.1:9999/
@@ -147,28 +114,23 @@ Exit IDE or press Ctrl+C to stop Projector.
 然后是开放 bastion server 的 `9999` 端口。
 
 ```shell
-sudo iptables -A INPUT -p tcp \
---dport 9999 \
--m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 9999 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 ```
 
 向 nat table 中添加两条 routing 规则，把请求转发到合理的端口。
 
-```shell
-sudo iptables -t nat -A PREROUTING -p tcp \
--d $BASTION_WAN_IP --dport 9999 \
--j DNAT --to-destination $HOST_LAN_IP:9999
-sudo iptables -t nat -A POSTROUTING -p tcp \
--s $HOST_LAN_IP --sport 9999 \
--j SNAT --to-source $BASTION_WAN_IP
+```bash
+sudo iptables -t nat -A PREROUTING -p tcp -d $BASTION_WAN_IP --dport 9999 -j DNAT --to-destination $HOST_LAN_IP:9999
+```
+
+```bash
+sudo iptables -t nat -A POSTROUTING -p tcp -s $HOST_LAN_IP --sport 9999 -j SNAT --to-source $BASTION_WAN_IP:9999
 ```
 
 我的 bastion server 并没有默认 `ACCEPT` 所有的 packets，所以还要特别允许导向 host server 的 traffic。
 
-```shell
-sudo iptables -A FORWARD -p tcp \
--d $HOST_LAN_IP --dport 9999 \
--m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+```bash
+sudo iptables -A FORWARD -p tcp -d $HOST_LAN_IP --dport 9999 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
 ```
 
 现在就可以在浏览器中打开 `http://<bastion-wan-ip>:9999` 来访问 IDE 啦。
@@ -189,3 +151,4 @@ sudo iptables -A FORWARD -p tcp \
 
 1. 1202 年了怎么还能用 `http` 呢？过于不安全。有时间把 `https` 搞起来。
 2. 把 `projector` 添加为 `systemd` 的一个 service，开机自启。
+3. `iptables` 的命令分好几行太丑，写在一行又太长。有时间拆开介绍一下。
