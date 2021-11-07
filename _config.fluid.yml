@@ -565,7 +565,7 @@ post:
 
     # 是否使用相对时间表示，比如："3 天前"
     # If true, it will be a relative time, such as: "3 days ago"
-    relative: false
+    relative: true
 
   # 文章右侧目录
   # Table of contents (TOC)
@@ -620,7 +620,7 @@ post:
 
     # 开启后，只有在文章 Front-matter 里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
     # If true, only set `math: true` in Front-matter will enable math, to load faster when the page does not contain math
-    specific: false
+    specific: true
 
     # Options: mathjax | katex
     engine: mathjax
