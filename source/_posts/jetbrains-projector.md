@@ -6,7 +6,7 @@ excerpt: 告别 CLion 的脑瘫 full remote 模式，体验像 VSCode remote 一
 categories:
   - misc
 date: 2021-10-31 22:48:00
-updated: 2021-11-08 01:01:00
+updated: {{today}}
 ---
 
 
@@ -114,23 +114,31 @@ Exit IDE or press Ctrl+C to stop Projector.
 然后是开放 bastion server 的 `9999` 端口。
 
 ```shell
-sudo iptables -A INPUT -p tcp --dport 9999 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp \
+              --dport 9999 -m conntrack \
+              --ctstate NEW,ESTABLISHED -j ACCEPT
 ```
 
 向 nat table 中添加两条 routing 规则，把请求转发到合理的端口。
 
 ```bash
-sudo iptables -t nat -A PREROUTING -p tcp -d $BASTION_WAN_IP --dport 9999 -j DNAT --to-destination $HOST_LAN_IP:9999
+sudo iptables -t nat -A PREROUTING -p tcp \
+              -d $BASTION_WAN_IP --dport 9999 \
+              -j DNAT --to-destination $HOST_LAN_IP:9999
 ```
 
 ```bash
-sudo iptables -t nat -A POSTROUTING -p tcp -s $HOST_LAN_IP --sport 9999 -j SNAT --to-source $BASTION_WAN_IP:9999
+sudo iptables -t nat -A POSTROUTING -p tcp \
+              -s $HOST_LAN_IP --sport 9999 \
+              -j SNAT --to-source $BASTION_WAN_IP:9999
 ```
 
 我的 bastion server 并没有默认 `ACCEPT` 所有的 packets，所以还要特别允许导向 host server 的 traffic。
 
 ```bash
-sudo iptables -A FORWARD -p tcp -d $HOST_LAN_IP --dport 9999 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A FORWARD -p tcp \
+              -d $HOST_LAN_IP --dport 9999 \
+              -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
 ```
 
 现在就可以在浏览器中打开 `http://<bastion-wan-ip>:9999` 来访问 IDE 啦。
@@ -147,8 +155,33 @@ sudo iptables -A FORWARD -p tcp -d $HOST_LAN_IP --dport 9999 -m state --state NE
 
 ![Projector launcher 界面](https://i.loli.net/2021/10/31/TES7LgfiorBx3kz.png)
 
-## 后续折腾 (placeholder)
+## 后续折腾 & debug
 
-1. 1202 年了怎么还能用 `http` 呢？过于不安全。有时间把 `https` 搞起来。
-2. 把 `projector` 添加为 `systemd` 的一个 service，开机自启。
-3. `iptables` 的命令分好几行太丑，写在一行又太长。有时间拆开介绍一下。
+### 使用 `https` 通信
+
+根据[官方文档](https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/accessing/#incomplete-clipboard-synchronization)，如果不使用 `https`，即便是用官方 client，clipboard 功能也会受到极大限制。自签证书就好的话，使用 `projector config edit <config-name>` 打开 secure connection 即可使用 `https`， 十分方便快捷。
+
+```diff
+$ projector config edit CLion
+Edit configuration CLion
+Enter the path to IDE (<enter> for <default-path>, <tab> for complete):
+Use separate configuration directory for this config? [y/N]
+Enter a Projector listening port (press ENTER for default) [9999]:
+Would you like to specify listening address (or host) for Projector? [y/N]
+Would you like to specify hostname for Projector access? [y/N]
++ Use secure connection (this option requires installing a projector's certificate to browser)? [y/N]y
+Would you like to set password for connection? [y/N]
+           1. tested
+           2. not_tested
+Choose update channel or 0 to keep current(tested): [0-2]: 0
+```
+
+不使用自签证书过于麻烦（。）我还没整。
+
+### 重新连接后所选 keymap 被重置
+
+我走遍天下都用 VSCode keymap。在默认设置下每次重新连接 projector 先前设置的 custom keymap 都会被重置，非常令人恼火。据 [YouTrack 上的 PRJ-121](https://youtrack.jetbrains.com/issue/PRJ-121)，可以通过设置 `ORG_JETBRAINS_PROJECTOR_SERVER_AUTO_KEYMAP` 环境变量解决这一问题（默认为 `true`）。
+
+打开 **Help | Edit Custom VM Options** 添加 `-DORG_JETBRAINS_PROJECTOR_SERVER_AUTO_KEYMAP=false` 并重启 IDE 即可。
+
+关于可用的环境变量，[projector 的文档](https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/server_customization/#enable-auto-keymap-setting)有更详尽的介绍。之后遇到问题我也会反复查看的。
