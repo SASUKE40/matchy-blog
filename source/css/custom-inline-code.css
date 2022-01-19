@@ -1,0 +1,16 @@
+code {
+    color: #000000
+}
+
+.markdown-body code {
+    background-color: rgba(183, 160, 224, 0.25)
+}
+
+[data-user-color-scheme=dark] .markdown-body :not(pre) > code {
+    background-color:  rgba(36, 38, 49, 0.4);
+    color: #ffffff
+}
+[data-user-color-scheme=dark] .note :not(pre) > code {
+    background-color:  rgba(36, 38, 49, 0.2);
+    color: #ffffff
+}
