@@ -200,11 +200,12 @@ custom_js:
 custom_css:
   - https://fonts.googleapis.com/css2?family=Lato&display=swap
   - https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
-  - "/css/custom.css"
+  - "/css/custom-inline-code.css"
   - "/css/line-color"
   - "/css/dark-mode-tag"
   - "/css/dark-mode-label"
   - "/css/dark-mode-btn"
+  - "/css/round"
 
 
 # 自定义 <head> 节点中的 HTML 内容
