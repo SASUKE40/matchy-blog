@@ -201,14 +201,14 @@ A client can obtain naming information from one or more of the switch's sources.
 
 The available information sources are listed in the following table:
 
-| Information Sources | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| `files`             | A file stored in the client's `/etc` directory. For example, `/etc/passwd` |
-| `nisplus`           | An NIS+ table. For example, the `hosts` table.               |
-| `nis`               | An NIS map. For example, the `hosts` map.                    |
+| Information Sources | Description                                                                                                                                         |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `files`             | A file stored in the client's `/etc` directory. For example, `/etc/passwd`                                                                          |
+| `nisplus`           | An NIS+ table. For example, the `hosts` table.                                                                                                      |
+| `nis`               | An NIS map. For example, the `hosts` map.                                                                                                           |
 | `compat`            | `compat` can be used for password and group information to support old-style + or - syntax in `/etc/passwd`, `/etc/shadow`, and `/etc/group` files. |
-| `dns`               | Can be used to specify that host information be obtained from DNS. |
-| `ldap`              | Can be used to specify entries be obtained from the LDAP directory. |
+| `dns`               | Can be used to specify that host information be obtained from DNS.                                                                                  |
+| `ldap`              | Can be used to specify entries be obtained from the LDAP directory.                                                                                 |
 
 Open `/etc/nsswitch.conf` to add `nis` as an information source.
 
@@ -335,8 +335,27 @@ This operation will pull information from the master to the slave.
 
 If the slave master is not added in [Step 5 of master set up](#5-run-ypinit--m). On **master** server, it is necessary to rerun `ypinit -m` and add the slave server when it prompts to enter the hosts.
 
+In order to push the changes in the maps on master, you also need to edit the `/var/yp/Makefile`:
+
+```shell
+$ sudo vim /var/yp/Makefile
+```
+
+Modify `NOPUSH=fasle` to `NOPUSH=true`.
+
+```bash
+#
+# Makefile for the NIS databases
+#
+# ...
+NOPUSH=true   # <- edit this to be false
+
+#...
+```
+
 ## Bibliography
 
-1. [System Administration Guide: Naming and Directory Services (DNS, NIS, and LDAP)](https://docs.oracle.com/cd/E18752_01/html/816-4556/toc.html): Sun Microsystems' guide on using NIS and DNS. Good for understanding NIS concepts, but the commands used in the guide are for servers with Sun Microsystems and thus outdated.
+1. [System Administration Guide: Naming and Directory Services (DNS, NIS, and LDAP)](https://docs.oracle.com/cd/E18752_01/html/816-4556/toc.html)
 2. [Eisler, M., Labiaga, R., & Stern, H. (2001). *Managing NFS and NIS: Help for Unix System Administrators*. O'Reilly Media, Inc.](https://docstore.mik.ua/orelly/networking_2ndEd/nfs/index.htm)
 3. [How to set up NIS for Ubuntu (Master, Client, Slave) -- Junyong Lee](https://codeslake.github.io/ubuntu/nis/setting-up-NIS-for-ubuntu/#setting-up-slave-server)
+4. [鳥哥的 Linux 私房菜：伺服器架設篇 -- 第十四章、帳號控管： NIS 伺服器](https://linux.vbird.org/linux_server/centos6/0430nis.php)
