@@ -186,8 +186,8 @@ color:
 # 主题字体配置
 # Font
 font:
-  font_size: 16px
-  font_family:
+  font_size: 18px
+  font_family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
   letter_spacing: 0.02em
   code_font_size: 85%
 
@@ -201,6 +201,10 @@ custom_css:
   - https://fonts.googleapis.com/css2?family=Lato&display=swap
   - https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
   - "/css/custom.css"
+  - "/css/line-color"
+  - "/css/dark-mode-tag"
+  - "/css/dark-mode-label"
+  - "/css/dark-mode-btn"
 
 
 # 自定义 <head> 节点中的 HTML 内容
