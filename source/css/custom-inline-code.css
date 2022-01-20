@@ -7,11 +7,11 @@ code {
 }
 
 [data-user-color-scheme=dark] .markdown-body :not(pre) > code {
-    background-color:  rgba(136, 109, 177, 0.45);
+    background-color:  rgba(23,23,33,.7);
     color: #ffffff
 }
 [data-user-color-scheme=dark] .note :not(pre) > code {
-    background-color:  rgba(136, 109, 177, 0.45);
+    background-color:  rgba(36,38,49,.4);
     color: #ffffff
 }
 
