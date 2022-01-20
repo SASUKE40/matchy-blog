@@ -4,24 +4,19 @@
 [data-user-color-scheme='dark']
     --strong-color #fff
 
-.markdown-body, .index-header
-    a:not(.anchorjs-link)
-        color var(--strong-color)
-        background-size 100% 200%;
-        box-shadow: inset 0 -3px 0 var(--link-hover-color)
-        transition background-position .1s ease-in-out, box-shadow .1s ease-in-out
-        background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0) 50%, var(--link-hover-color) 50% )
 
-        &:hover
-            text-decoration none
-            background-position: 0 100%
-            transition background-position .2s ease-in-out, box-shadow .1s ease-in-out
+hover-style()
+    color var(--strong-color)
+    background-size 100% 200%;
+    box-shadow: inset 0 -3px 0 var(--link-hover-color)
+    transition background-position .1s ease-in-out, box-shadow .1s ease-in-out
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0) 50%, var(--link-hover-color) 50% )
 
-// [data-user-color-scheme='dark'] .markdown-body
-//     a:not(.anchorjs-link)
-//         color #fff
+    &:hover
+        text-decoration none
+        background-position: 0 100%
+        transition background-position .2s ease-in-out, box-shadow .1s ease-in-out
 
-// [data-user-color-scheme='dark'] main
-//     h1
-//         a:not(.anchorjs-link)
-//             color #fff
+.markdown-body a:not(.anchorjs-link,.btn,.footnote-backref),
+.index-header a:not(.anchorjs-link)
+    hover-style()
