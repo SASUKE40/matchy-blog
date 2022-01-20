@@ -170,7 +170,7 @@ color:
 
   # 超链接悬浮时字体色
   # Color of link when hovering
-  link_hover_color: "#b279f2"
+  link_hover_color: "#bd93f9"
   link_hover_color_dark: "#b279f2"
 
   # 超链接悬浮背景色
@@ -206,6 +206,7 @@ custom_css:
   - "/css/dark-mode-label"
   - "/css/dark-mode-btn"
   - "/css/round"
+  - "/css/custom-link"
 
 
 # 自定义 <head> 节点中的 HTML 内容
