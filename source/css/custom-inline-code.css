@@ -14,3 +14,7 @@ code {
     background-color:  rgba(136, 109, 177, 0.45);
     color: #ffffff
 }
+
+.hljs {
+    background-color: #171721 !important
+}
