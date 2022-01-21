@@ -175,8 +175,8 @@ color:
 
   # 超链接悬浮背景色
   # Color of link background when hovering
-  link_hover_bg_color: "#f8f9fa"
-  link_hover_bg_color_dark: "#45405c"
+  link_hover_bg_color: "#e3deed55"
+  link_hover_bg_color_dark: "#e3deed1a" # "#45405c"
 
   # 主面板背景色
   # Color of main board
@@ -909,6 +909,12 @@ links:
   # 友链的成员项
   # Member item of page
   items:
+    - {
+      title: "Tesla Ice Zhang",
+      intro: "Talented & cute PL boi",
+      link: "http://ice1000.org",
+      image: "https://sm.ms/image/M6gleZb3GRNy9zP"
+    }
     # - {
     #   title: "Fluid Blog",
     #   intro: "主题博客",
