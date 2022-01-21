@@ -131,12 +131,12 @@ color:
   body_bg_color: "#d0d0d9"
   # 暗色模式下的 body 背景色，下同
   # Color in dark mode, the same below
-  body_bg_color_dark: "#2c2c3b"
+  body_bg_color_dark: "#232330"
 
   # 顶部菜单背景色
   # Color of navigation bar background
   navbar_bg_color: "#4e4c63"
-  navbar_bg_color_dark: "#45405c"
+  navbar_bg_color_dark: "#382f52"
 
   # 顶部菜单字体色
   # Color of navigation bar text
@@ -910,10 +910,10 @@ links:
   # Member item of page
   items:
     - {
-      title: "Tesla Ice Zhang",
+      title: "Tesla Zhang",
       intro: "Talented & cute PL boi",
       link: "http://ice1000.org",
-      image: "https://sm.ms/image/M6gleZb3GRNy9zP"
+      image: /img/tiz.jpg # "https://sm.ms/image/M6gleZb3GRNy9zP"
     }
     # - {
     #   title: "Fluid Blog",
