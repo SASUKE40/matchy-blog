@@ -15,6 +15,6 @@ code {
     color: #ffffff
 }
 
-.hljs {
+[data-user-color-scheme=dark] .hljs {
     background-color: #171721 !important
 }

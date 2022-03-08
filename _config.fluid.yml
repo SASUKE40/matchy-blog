@@ -39,6 +39,12 @@ code:
   # Enable copy code button
   copy_btn: true
 
+  # 代码语言
+  # Code language
+  language:
+    enable: true
+    default: "TEXT"
+
   # 代码高亮
   # Code highlight
   highlight:
@@ -57,17 +63,15 @@ code:
       # 在链接中挑选 style 填入
       # Select a style in the link
       # See: https://highlightjs.org/static/demo/
-      style: "Atom One Dark"
-
-      # 是否根据 style 改变代码背景色（如果 style 是深色背景别忘了开启此项）
-      # If true, the code background will change color based on the style (If style has a dark background, don't forget to true)
-      bg_color: true
+      style: "Atom One Light"
+      style_dark: "Atom One Dark"
 
     prismjs:
       # 在下方链接页面右侧的圆形按钮挑选 style 填入，也可以直接填入 css 链接
       # Select the style button on the right side of the link page, you can also set the CSS link
       # See: https://prismjs.com/
       style: "default"
+      style_dark: "tomorrow night"
 
       # 设为 true 高亮将本地静态生成（并只支持部分 prismjs 插件），设为 false 高亮将在浏览器通过 js 生成
       # If true, it will be generated locally (but some prismjs plugins are not supported). If false, it will be generated via JS in the browser
@@ -92,6 +96,11 @@ fun_features:
     # 是否循环播放效果
     # If true, loop animation
     loop: false
+
+    # 在指定页面开启，不填则在所有页面开启
+    # Enable in specified page, all pages by default
+    # Options: home | post | tag | category | about | links | page | 404
+    scope: []
 
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
@@ -183,6 +192,29 @@ color:
   board_color: "#fff"
   board_color_dark: "#302e47"
 
+  # 分隔线和表格边线的颜色
+  # Color of horizontal rule and table border
+  line_color: "#eaecef"
+  line_color_dark: "#435266"
+
+  # 滚动条颜色
+  # Color of scrollbar
+  scrollbar_color: "#c4c6c9"
+  scrollbar_color_dark: "#687582"
+  # 滚动条悬浮颜色
+  # Color of scrollbar when hovering
+  scrollbar_hover_color: "#a6a6a6"
+  scrollbar_hover_color_dark: "#9da8b3"
+
+  # 按钮背景色
+  # Color of button
+  button_bg_color: "transparent"
+  button_bg_color_dark: "transparent"
+  # 按钮悬浮背景色
+  # Color of button when hovering
+  button_hover_bg_color: "#f2f3f5"
+  button_hover_bg_color_dark: "#46647e"
+
 # 主题字体配置
 # Font
 font:
@@ -202,8 +234,6 @@ custom_css:
   - https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
   - "/css/custom-inline-code.css"
   - "/css/line-color"
-  - "/css/dark-mode-tag"
-  - "/css/dark-mode-label"
   - "/css/dark-mode-btn"
   - "/css/round"
   - "/css/custom-link"
