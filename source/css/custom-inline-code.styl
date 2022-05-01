@@ -1,0 +1,27 @@
+
+.markdown-body
+    strong, h1, h2, h3, h4, h5, h6, em
+        color #433d4f
+    pre
+        background-color  #f7f6fa !important
+    :not(pre)>code
+        color #000000
+        background-color rgba(183, 160, 224, 0.25)
+
+    .hljs
+        background-color #f7f6fa
+
+[data-user-color-scheme=dark] .markdown-body
+    strong, h1, h2, h3, h4, h5, h6, em
+        color #ffffff !important
+    pre
+        background-color: #171721 !important
+    :not(pre)>code
+        background-color rgba(126, 104, 157, 0.5)
+        color #ffffff
+    .note
+        :not(pre)>code
+            background-color rgba(126, 104, 157, 0.5)
+            color #ffffff
+    .hljs
+        background-color #171721 !important
