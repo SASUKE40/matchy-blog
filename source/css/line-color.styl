@@ -1,16 +1,12 @@
-$new-line-color = #443e5d
+.markdown-body
+  table
+    tr:nth-child(2n)
+      background-color rgb(248, 246, 250)!important
+
 
 [data-user-color-scheme=dark] .markdown-body
-  h1, h2
-    border-bottom-color $new-line-color !important
-
   table
     tr
       background-color #171721 !important
     tr:nth-child(2n)
       background-color #1f1f30 !important
-    th, td
-      border-color $new-line-color !important
-
-[data-user-color-scheme=dark] hr, .markdown-body hr
-  border-top-color $new-line-color !important

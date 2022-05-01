@@ -10,7 +10,7 @@
     "postinstall": "patch-package"
   },
   "hexo": {
-    "version": "6.0.0"
+    "version": "6.1.0"
   },
   "dependencies": {
     "hexo": "^6.0.0",
@@ -26,7 +26,7 @@
     "hexo-renderer-kramed": "^0.1.4",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-fluid": "^1.8.14",
+    "hexo-theme-fluid": "https://github.com/fluid-dev/hexo-theme-fluid.git#develop",
     "hexo-wordcount": "^6.0.1",
     "jpegtran": "^2.0.0",
     "jpegtran-bin": "^6.0.1",
