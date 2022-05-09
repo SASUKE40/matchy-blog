@@ -6,9 +6,17 @@ excerpt: 告别 CLion 的脑瘫 full remote 模式，体验像 VSCode remote 一
 categories:
   - misc
 date: 2021-10-31 22:48:00
-updated: {{today}}
+updated: 2022-05-09 19:55:00
 ---
 
+{% note danger %}
+As is stated officially on [Projector's website](https://lp.jetbrains.com/projector/), "the primary Remote Development tool for JetBrains IDEs is [Gateway](https://www.jetbrains.com/remote-development/gateway/). [...] Projector is a special solution for those who can't use Gateway. Projector has much higher network latency and is more difficult to configure, but it is the recommended solution if you want to access your IDEs from web browsers (including mobile browsers)."
+Hence, this article is rather deprecated. However, if you do want to use Projector, go on reading :)
+{% endnote %}
+{% note danger %}
+[Jetbrains Projector 官网](https://lp.jetbrains.com/projector/)已经表明 “应首选 [Gateway](https://www.jetbrains.com/remote-development/gateway/) 作为 Jetbrains 系 IDE 的远程开发工具。[...] Projector 是为无法使用 Gateway 的用户提供的解决方案。它网络延迟更大也更难配置。但 Projector 仍是通过网页浏览器（含移动端浏览器）访问 IDE 的推荐解决方案。”
+综上，本文已经不具备时效性——除非你确实想使用 Projector :)
+{% endnote %}
 
 ## 为什么要用？
 
