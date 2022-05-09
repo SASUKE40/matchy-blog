@@ -1,6 +1,7 @@
 ---
 title: How To Set Up NIS for Ubuntu servers
 date: 2022-01-18 17:32:40
+updated: 2022-05-09 20:28:00
 categories: [devops]
 tags: [nis, linux, ubuntu]
 excerpt: Tutorial for setting up NIS and enabling user & group synchronization across the cluster
@@ -19,12 +20,6 @@ NIS uses a client-server arrangement. By running NIS, the system administrator c
 NIS uses **domains** to arrange the machines, users, and networks in its **namespace**. However, it does not use a domain hierarchy; an NIS namespace is flat.
 
 ## Set Up NIS
-
-Our lab's NIS topology is shown in the figure below.
-
-{% note danger %}
-Add a figure!
-{% endnote %}
 
 ### NIS Master
 
