@@ -242,6 +242,7 @@ custom_css:
   - "/css/line-color"
   - "/css/custom-link"
   - "/css/license-box"
+  - "/css/gsoc"
 
   # 网页访问统计
 # Analysis of website visitors
