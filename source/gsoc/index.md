@@ -1,4 +1,5 @@
 ---
+title: GSoC 2022 Weekly Development Report
 subtitle: GSoC 2022 Weekly Development Report
 layout: gsoc
 anchorjs: false
