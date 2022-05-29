@@ -360,6 +360,7 @@ navbar:
           { key: "movies", link: "/movies/"},
           { key: "games", link: "/games/" }
         ]}
+    - { key: "GSoC", link: "/gsoc/", icon: "iconfont icon-google-fill"}
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
