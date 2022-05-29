@@ -19,9 +19,10 @@ jobs:
 
     steps:
     - name: Checkout              # 拉取当前执行 Actions 仓库的指定分支
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         ref: master
+        submodules: true
 
     - name: Setup Node            # 安装 Node 环境
       uses: actions/setup-node@v1
