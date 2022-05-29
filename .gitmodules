@@ -1,0 +1,4 @@
+[submodule "themes/fluid"]
+	path = themes/fluid
+	url = git@github.com:matchy233/hexo-theme-fluid
+	branch = custom
