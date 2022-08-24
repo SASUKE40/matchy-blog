@@ -26,6 +26,7 @@
     "hexo-renderer-kramed": "^0.1.4",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^3.0.0",
+    "hexo-theme-fluid": "https://github.com/matchy233/hexo-theme-fluid.git#custom",
     "hexo-wordcount": "^6.0.1",
     "jpegtran": "^2.0.0",
     "jpegtran-bin": "^6.0.1",

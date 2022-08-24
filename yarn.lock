@@ -2015,6 +2015,10 @@ hexo-server@^3.0.0:
     picocolors "^1.0.0"
     serve-static "^1.14.1"
 
+"hexo-theme-fluid@https://github.com/matchy233/hexo-theme-fluid.git#custom":
+  version "1.9.2"
+  resolved "https://github.com/matchy233/hexo-theme-fluid.git#2bf66531c2810c233f345b53130eac84826b49e2"
+
 hexo-util@^0.6.0:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/hexo-util/-/hexo-util-0.6.3.tgz#16a2ade457bef955af0dfd22a3fe6f0a49a9137c"
