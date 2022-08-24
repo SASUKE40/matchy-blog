@@ -1017,6 +1017,24 @@ links:
       link: "http://ice1000.org",
       image: /img/tiz.jpg # "https://sm.ms/image/M6gleZb3GRNy9zP"
     }
+    - {
+      title: "Ice Code New",
+      intro: "InfoSec enthusiast",
+      link: "https://blog.icecode.xyz/zh/",
+      image: /img/icecodenew.jpg
+    }
+    - {
+      title: "Inoki",
+      intro: "Lord of KDE! Actually a Psyduck",
+      link: "https://blog.inoki.cc/",
+      image: /img/inoki.jpg
+    }
+    - {
+      title: "Alendia",
+      intro: "Human-cat interaction mahou shoujo",
+      link: "https://alendia.dev/",
+      image: /img/alendia.png
+    }
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
