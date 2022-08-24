@@ -8,10 +8,15 @@ The banner picture is part of [Dr. Gaël McGill's](https://bcmp.hms.harvard.edu/
 
 题图是 [Gaël McGill](https://bcmp.hms.harvard.edu/faculty-staff/gael-mcgill) 博士根据 X 射线衍射、核磁共振和冷冻电镜数据呈现的真核细胞切面渲染图的一部分。很棒不是吗。
 
-I'm known as Mischa "Matchy" Volynskaya on most social media sites. You can call me Matchy. I'm currently an undergraduate student doing double major in Biological Sciences and Computer Science & Engineering. I'm interested in Computational Biology, which is also the research area where I'd like to pursue a higher degree. Apart from that I also want to learn more about System Programming and Distributed Computing.
+I'm known as Mischa "Matchy" Volynskaya on most social media sites. You can call me Matchy. I'm an incoming Master student in Computational Biology. Most of the time I play with strings and exploit parallelization/vectorization techniques. Apart from that, I'm broadly interested in distributed computing, cloud computing and database design (actually those technologies are also directly applicable to my research interest!).
 
-在大多数社交媒体网站上我都叫 Mischa "Matchy" Volynskaya，可以叫我 Matchy。本科生命科学和计算机科学双学位在读。我对计算生物学比较感兴趣，以后也想在这个领域深造。除此之外也想多学点系统编程和分布式计算的知识。
+在大多数社交媒体网站上我都叫 Mischa "Matchy" Volynskaya，可以叫我 Matchy。即将成为一名计算生物学领域的硕士研究生。多数时候都在玩字符串，或者折腾并行/向量化方法。除此之外，我对分布式计算、云计算和数据库设计都有广泛的兴趣，这些领域实际上也和我的科研兴趣直接相关。
 
 In my spare time I unwind to [reading](/books), drawing, [movies](/movies) and [video games](/games).
 
 空闲时间喜欢[读书](/books)、画画、看[电影](/movies)、玩[游戏](/games)聊做消遣。
+
+<div class="hidden">
+Currently in love with <a title="zita-ch(Chong Zhang)" href="https://github.com/zita-ch">zita-ch(Chong Zhang)</a>.
+I <a title="Mit meiner Prinzessin" href="https://neodb.social/collections/338/">watch movies with him</a> almost every day.
+</div>
