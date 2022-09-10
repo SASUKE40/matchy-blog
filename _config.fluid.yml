@@ -1036,6 +1036,12 @@ links:
       link: "https://alendia.dev/",
       image: /img/alendia.png
     }
+    - {
+      title: "Edward",
+      intro: "Shark 🦈 lover, amateur pianist 🎹",
+      link: "https://edward40.com",
+      image: /img/kirito.jpg
+    }
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
